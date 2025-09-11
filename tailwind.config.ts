@@ -68,7 +68,7 @@ const config: Config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans],
-				main: ['"JetBrains Mono"', 'monospace'],
+				main: ['"Inter"', 'sans-serif'],
 				jp: ['"Noto Sans JP"', 'sans-serif']
 			},
 			keyframes: {

@@ -85,7 +85,7 @@
 			}
 			hiragana = getRandomHiraganaAnswers();
 		} else {
-			toast.error(`${answer} is not the answer`);
+			toast.error(`${answer} bukan jawaban yang benar`);
 		}
 		submitAnswerValue = '';
 	};
@@ -136,7 +136,7 @@
 				<path d="M10 22h4" />
 			</svg>
 		</Button>
-		<span class="ml-auto font-semibold">
+		<span class="ml-auto font-semibold tabular-nums">
 			{sessionProgress}
 		</span>
 	</div>
@@ -155,7 +155,7 @@
 					variant={answer.wrong ? 'destructive' : 'default'}
 					disabled={answer.wrong}
 					size="lg"
-					class="grow px-0 text-2xl md:text-3xl"
+					class="grow px-0 py-8 text-2xl md:text-3xl"
 				>
 					{answer.value}
 				</Button>
@@ -171,11 +171,16 @@
 			}}
 			class="mx-auto flex w-full max-w-2xl flex-row items-center justify-stretch gap-4 p-4 md:gap-4"
 		>
-			<Input type="answer" placeholder="Answer" bind:value={submitAnswerValue} />
+			<Input
+				type="answer"
+				placeholder="Jawaban"
+				bind:value={submitAnswerValue}
+				class="py-8 text-2xl md:text-3xl"
+			/>
 			<Button
 				type="submit"
 				size="lg"
-				class="text-2xl md:text-3xl"
+				class="py-8 text-2xl uppercase md:text-3xl"
 				disabled={submitAnswerValue === ''}>submit</Button
 			>
 		</form>
